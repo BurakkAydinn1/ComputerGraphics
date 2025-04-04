@@ -1,0 +1,29 @@
+<scene>
+    <maxraytracedepth>1</maxraytracedepth>
+    <background>0.2 0.2 0.6</background>
+    <camera>
+        <position>0 0 0</position>
+        <gaze>0 0 -1</gaze>
+        <up>0 1 0</up>
+        <nearplane>-1 1 -1 1</nearplane>
+        <neardistance>1</neardistance>
+        <imageresolution>512 512</imageresolution>
+    </camera>
+    <lights>
+        <ambientlight>3 3 3</ambientlight>
+    </lights>
+    <materials>
+        <material id="0">
+            <ambient>0.1 0.1 0.1</ambient>
+            <diffuse>0.5 0.5 0.5</diffuse>
+            <specular>0 0 0</specular>
+            <mirrorreflactance>0 0 0</mirrorreflactance>
+            <phongexponent>1</phongexponent>
+            <texturefactor>0</texturefactor>
+        </material>
+    </materials>
+    <vertexdata />
+    <texturedata />
+    <normaldata>0 0 -1</normaldata>
+    <objects />
+</scene>

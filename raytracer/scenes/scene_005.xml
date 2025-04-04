@@ -1,0 +1,83 @@
+<scene>
+    <maxraytracedepth>3</maxraytracedepth>
+    <background>0.1 0.1 0.1</background>
+
+    <camera>
+        <position>0 0 0</position>
+        <gaze>0 0 -1</gaze>
+        <up>0 1 0</up>
+        <nearplane>-1 1 -1 1</nearplane>
+        <neardistance>1</neardistance>
+        <imageresolution>512 512</imageresolution>
+    </camera>
+
+    <lights>
+        <ambientlight>3 3 3</ambientlight>
+
+        <pointlight id="0">
+            <position>3 3 -6</position>
+            <intensity>1 1 1</intensity>
+        </pointlight>
+
+        <triangularlight id="1">
+            <vertex1>-2 4 -6</vertex1>
+            <vertex2>2 4 -2</vertex2>
+            <vertex3>0 6 -2</vertex3>
+            <intensity>1 1 1</intensity>
+        </triangularlight>
+    </lights>
+
+    <materials>
+        <material id="0">
+            <ambient>0.1 0.1 0.3</ambient>
+            <diffuse>0.3 0.3 0.9</diffuse>
+            <specular>1 1 1</specular>
+            <mirrorreflactance>0 0 0</mirrorreflactance>
+            <phongexponent>32</phongexponent>
+            <texturefactor>0</texturefactor>
+        </material>
+        <material id="1">
+            <ambient>0.1 0.1 0.1</ambient>
+            <diffuse>0.8 0.1 0.1</diffuse>
+            <specular>0.5 0.5 0.5</specular>
+            <mirrorreflactance>0.7 0.7 0.7</mirrorreflactance>
+            <phongexponent>64</phongexponent>
+            <texturefactor>0</texturefactor>
+        </material>
+    </materials>
+
+    <vertexdata>
+        -1 -1 -5
+        1 -1 -5
+        0 1 -5
+        -0.5 -1 -3
+        0.5 -1 -3
+        0 1 -3
+    </vertexdata>
+
+    <texturedata>
+        0 0
+        1 0
+        0.5 1
+        0 0
+        1 0
+        0.5 1
+    </texturedata>
+
+    <normaldata>0 0 -1</normaldata>
+
+    <objects>
+        <mesh id="m1">
+            <materialid>0</materialid>
+            <faces>
+                1/1/1 2/2/1 3/3/1
+            </faces>
+        </mesh>
+        <mesh id="m2">
+            <materialid>1</materialid>
+            <faces>
+                4/4/2 5/5/2 6/6/2
+            </faces>
+        </mesh>
+    </objects>
+</scene>
