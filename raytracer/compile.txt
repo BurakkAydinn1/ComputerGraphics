@@ -1,0 +1,53 @@
+🧾 RAYTRACER DERLEME & ÇALIŞTIRMA TALİMATLARI
+
+Bu proje, bir raytracer programını çalıştırır ve XML sahne dosyasına göre bir .ppm görseli üretir, ardından PNG formatına dönüştürür.
+
+💻 GEREKSİNİMLER:
+- WSL (Ubuntu) veya Linux ortamı
+- g++ (C++ derleyicisi)
+- make
+- imagemagick (convert komutu için)
+
+📦 1. GEREKLİ PAKETLERİ YÜKLE (İlk kez çalıştıranlar için):
+Terminalde aşağıdaki komutları çalıştır:
+
+    sudo apt update
+    sudo apt install build-essential imagemagick
+
+📁 2. PROJE YAPISI
+Aşağıdaki gibi organize edilmiştir:
+
+    raytracer/
+    ├── scenes/                → Sahne XML dosyaları
+    ├── src/, include/, tinyxml2/ → Kod ve parser dosyaları
+    ├── output/               → Oluşturulan görüntü dosyaları (.ppm/.png)
+    ├── main.cpp              → Ana dosya
+    ├── Makefile              → Derleme senaryosu
+    └── convert.sh            → .ppm → .png dönüştürücü betik
+
+⚙️ 3. DERLEME KOMUTU:
+
+Terminalde `raytracer/` klasörü içindeyken:
+
+    make render SCENE=scenes/scene_000.xml
+
+Bu komut şunları yapar:
+1. Projeyi derler
+2. Belirtilen sahne dosyasına göre `.ppm` çıktısı oluşturur
+3. `convert.sh` ile `.png` formatına dönüştürür
+
+🎨 4. ÇIKTI DOSYASI:
+Aşağıdaki dizinde oluşturulur:
+
+    output/render_scene_000.ppm
+    output/render_scene_000.png
+
+🧼 5. TEMİZLEME (Derleme çıktısını silmek için):
+
+    make clean
+
+📌 NOT:
+- Yeni bir sahne çalıştırmak için sadece `scene_000.xml` yerine başka bir sahne ismi verin.
+  Örnek:
+
+      make render SCENE=scenes/scene_002.xml
